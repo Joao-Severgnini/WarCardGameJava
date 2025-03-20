@@ -22,11 +22,13 @@ public class Deck {
     Collections.shuffle(deck, new Random());
   }
 
+  // Criamos novas listas para as metades de cada jogador
   public List<Card> getFirstHalf() {
     return new LinkedList<>(deck.subList(0, 26));
   }
 
-  public List<Card> getSecondHalf() { return new LinkedList<>(deck.subList(26, 52));
+  public List<Card> getSecondHalf() {
+    return new LinkedList<>(deck.subList(26, 52));
 
   }
 }

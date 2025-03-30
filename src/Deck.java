@@ -23,6 +23,7 @@ public class Deck {
   }
 
   // Criamos novas listas para as metades de cada jogador
+  // Cada player recebe uma sublist do deck
   public List<Card> getFirstHalf() {
     return new LinkedList<>(deck.subList(0, 26));
   }

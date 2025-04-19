@@ -1,8 +1,8 @@
 public class Card {
-  private int rank; // iniciar rank (2, 3, 4... KIng, Ace)
-  private int suit; // iniciar naipe (Espadas, Paus, Copas, Ouro)
+  private int rank; // initialize rank (2, 3, 4... King, Ace)
+  private int suit; // initialize suit (Spades, Hearts, Clubs, Diamonds)
 
-  // Contructor
+  // Constructor
   public Card(int rank, int suit) {
     this.rank = rank;
     this.suit = suit;
@@ -24,45 +24,45 @@ public class Card {
 
   @Override
   public String toString() {
-    // combinar rank e naipe em uma string só ex: (3 de copas)
+    // combine rank and suit into a single string, e.g., (3 of Hearts)
 
-    // StringBuilder para modificar depois
+    // StringBuilder to modify later
     StringBuilder displayCards = new StringBuilder();
 
     switch (rank) {
-      // ja que rank foi declarado como int combinamos com seu respectivo numero
+      // since rank is declared as int, we combine it with its respective name
       case 11:
-        displayCards.append("Valete");
+        displayCards.append("Jack");
         break;
       case 12:
-        displayCards.append("Dama");
+        displayCards.append("Queen");
         break;
       case 13:
-        displayCards.append("Rei");
+        displayCards.append("King");
         break;
       case 14:
-        displayCards.append("Ás");
+        displayCards.append("Ace");
         break;
       default:
         displayCards.append(rank);
         break;
     }
 
-    displayCards.append(" de ");
+    displayCards.append(" of ");
 
     switch (suit) {
-      // Combinamos tambem os naipes
+      // also combine the suits
       case 0:
-        displayCards.append("Espadas");
+        displayCards.append("Spades");
         break;
       case 1:
-        displayCards.append("Copas");
+        displayCards.append("Hearts");
         break;
       case 2:
-        displayCards.append("Paus");
+        displayCards.append("Clubs");
         break;
       case 3:
-        displayCards.append("Ouro");
+        displayCards.append("Diamonds");
         break;
     }
     return displayCards.toString();
